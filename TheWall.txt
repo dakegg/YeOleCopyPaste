@@ -1,0 +1,4 @@
+	function Get-ExtendedRight ($ExtendedRight)
+	{
+		return (Get-ADObject -SearchBase (Get-ADRootDSE).ConfigurationNamingContext -Filter { (objectclass -eq "controlAccessRight") -and (rightsguid -eq $ExtendedRight) } -Properties RightsGuid, DisplayName).Displayname
+	}
