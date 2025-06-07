@@ -4,3 +4,8 @@
 	}
 
 something more...
+
+[string]$filter = "/" + $ObjectType + "[DisplayName = '" + $SourceSR + "']"
+$SourceObj = export-fimconfig -customConfig $filter -OnlyBaseResources
+$hashObj = ConvertResourceToHashtable $SourceObj
+
