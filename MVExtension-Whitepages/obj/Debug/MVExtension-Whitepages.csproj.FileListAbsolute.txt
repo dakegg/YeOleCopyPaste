@@ -1,0 +1,5 @@
+C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions\MVExtension-Whitepages.dll
+C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions\MVExtension-Whitepages.pdb
+D:\Installs\Rules Extensions\MVExtension-Whitepages\obj\Debug\MVExtension-Whitepages.csprojResolveAssemblyReference.cache
+D:\Installs\Rules Extensions\MVExtension-Whitepages\obj\Debug\MVExtension-Whitepages.dll
+D:\Installs\Rules Extensions\MVExtension-Whitepages\obj\Debug\MVExtension-Whitepages.pdb
