@@ -13,3 +13,8 @@ $hashObj = ConvertResourceToHashtable $SourceObj
 set-alias installutil $env:windir\Microsoft.NET\Framework64\v2.0.50727\installutil 
 installutil .\Microsoft.ResourceManagement.Automation.dll
 
+IIF(RegexMatch([//Target/DisplayName], "^Admin.*"),TRUE,FALSE)
+
+"^[0-9]{8}$"
+
+
