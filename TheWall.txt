@@ -17,6 +17,20 @@ IIF(RegexMatch([//Target/DisplayName], "^Admin.*"),TRUE,FALSE)
 
 "^[0-9]{8}$"
 
-Oh0$0^L#QQ6WO0WF
+User: GREEN\AADSync
+Pass: Wkn@7i0P24wG^13w
+ 
+User: EADLAB\AADSync
+Pass: Oh0$0^L#QQ6WO0WF
+ 
+User: RED\AADSync
+Pass: 033%&Fg4AJJ76dv6
+ 
+User: TEAL\AADSync
+Pass: Hk581KwNx9#B!ku5
+ 
+User: EADLAB\esa_SEMA4db
+Pass: b7C8M$$qJmOJ
+Description: Service account for the SEMA4 SQL database
 
 
