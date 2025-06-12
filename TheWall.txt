@@ -1,4 +1,5 @@
-	function Get-ExtendedRight ($ExtendedRight)
+
+GC://OU=Subscribers MNITVILLE,DC=eadlab,DC=localfunction Get-ExtendedRight ($ExtendedRight)
 	{
 		return (Get-ADObject -SearchBase (Get-ADRootDSE).ConfigurationNamingContext -Filter { (objectclass -eq "controlAccessRight") -and (rightsguid -eq $ExtendedRight) } -Properties RightsGuid, DisplayName).Displayname
 	}
@@ -34,3 +35,6 @@ Pass: b7C8M$$qJmOJ
 Description: Service account for the SEMA4 SQL database
 
 
+GC://OU=Subscribers MNITVILLE,DC=eadlab,DC=local
+
+(&(objectClass=user)(objectCategory=person)(userPrincipalName=[//Value]))
