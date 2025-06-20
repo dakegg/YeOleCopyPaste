@@ -39,6 +39,9 @@ GC://OU=Subscribers MNITVILLE,DC=eadlab,DC=local
 
 (&(objectClass=user)(objectCategory=person)(userPrincipalName=[//Value]))
 
+Throw Event Log Error if No Agency Found
+
+Not(IsPresent([//WorkflowData/Agency]))
 
 # WAL Activity to flag cases where an agency defined for a user does not exist in the table
 Param (
@@ -51,6 +54,12 @@ try {Get-EventLog -Source AgencyLookupEvent -LogName WAL -ea stop}
 catch [System.ArgumentException] {Write-Debug "That source doesnt exist, creating"; New-EventLog -Source AgencyLookupEvent -LogName WAL}
 
 Write-EventLog -LogName WAL -Source AgencyLookupEvent -EntryType Error -EventId 666 -Message "The Agency $Agency defined for user $UserUPN does not exist in the Agency Lookup Table Resource"
+
+UserUPN
+[//Target/AgencyUPN]
+
+Agency
+[//Target/Agency]
 
 
 
