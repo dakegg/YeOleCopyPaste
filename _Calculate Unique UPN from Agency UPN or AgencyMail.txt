@@ -1,0 +1,121 @@
+<ns0:SequentialWorkflow ActorId="00000000-0000-0000-0000-000000000000" RequestId="00000000-0000-0000-0000-000000000000" x:Name="SequentialWorkflow" TargetId="00000000-0000-0000-0000-000000000000" WorkflowDefinitionId="00000000-0000-0000-0000-000000000000" xmlns:ns1="clr-namespace:MicrosoftServices.IdentityManagement.WorkflowActivityLibrary.Activities;Assembly=MicrosoftServices.IdentityManagement.WorkflowActivityLibrary, Version=2.20.723.0, Culture=neutral, PublicKeyToken=ecf4517a3d6e9ee9" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns2="clr-namespace:MicrosoftServices.IdentityManagement.WorkflowActivityLibrary.ComponentActivities;Assembly=MicrosoftServices.IdentityManagement.WorkflowActivityLibrary, Version=2.20.723.0, Culture=neutral, PublicKeyToken=ecf4517a3d6e9ee9" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Microsoft.ResourceManagement.Workflow.Activities;Assembly=Microsoft.ResourceManagement, Version=4.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+	<ns1:UpdateResources x:Name="actionActivity3" ActivityExecutionCondition="IsPresent([//Target/AgencyUPN])" ActivityDisplayName="Split AgencyUPN for uniqueness" Iteration="" ActorType="Service" ApplyAuthorizationPolicy="False" ResolveDynamicGrammar="False" QueryResources="False" Advanced="True" ActorString="">
+		<ns1:UpdateResources.UpdatesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/Suffix]<x:Key><ns4:String>1:1</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Last(SplitString([//Target/AgencyUPN],"@"))<x:Key><ns4:String>1:0</ns4:String></x:Key></ns4:String>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>2:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">3<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//Target/AgencyUPN]<x:Key><ns4:String>2:0</ns4:String></x:Key></ns4:String>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>1:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/OldValue]<x:Key><ns4:String>2:1</ns4:String></x:Key></ns4:String>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>0:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">First(SplitString([//Target/AgencyUPN],"@"))<x:Key><ns4:String>0:0</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/Prefix]<x:Key><ns4:String>0:1</ns4:String></x:Key></ns4:String>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.UpdatesTable>
+		<ns1:UpdateResources.QueriesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.QueriesTable>
+	</ns1:UpdateResources>
+	<ns1:UpdateResources x:Name="actionActivity6" ActivityExecutionCondition="IsPresent([//Target/AgencyMail])" ActivityDisplayName="Split the AgencyMail for uniqueness" Iteration="" ActorType="Service" ApplyAuthorizationPolicy="False" ResolveDynamicGrammar="False" QueryResources="False" Advanced="True" ActorString="">
+		<ns1:UpdateResources.UpdatesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/Suffix]<x:Key><ns4:String>1:1</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Last(SplitString([//Target/AgencyMail],"@"))<x:Key><ns4:String>1:0</ns4:String></x:Key></ns4:String>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>2:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">3<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//Target/AgencyMail]<x:Key><ns4:String>2:0</ns4:String></x:Key></ns4:String>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>1:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/OldValue]<x:Key><ns4:String>2:1</ns4:String></x:Key></ns4:String>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>0:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">First(SplitString([//Target/AgencyMail],"@"))<x:Key><ns4:String>0:0</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/Prefix]<x:Key><ns4:String>0:1</ns4:String></x:Key></ns4:String>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.UpdatesTable>
+		<ns1:UpdateResources.QueriesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.QueriesTable>
+	</ns1:UpdateResources>
+	<ns1:RunPowerShellScript ScriptLocation="WorkflowDefinition" x:Name="actionActivity7" ActivityExecutionCondition="Not(RegexMatch([//WorkflowData/OldValue],&quot;^[a-zA-Z0-9._%+-]+@state.mn\.us$&quot;))" ActivityDisplayName="Log to Event Log if UPN\MAIL suffix is wrong" ImpersonatePowerShellUser="False" ReturnType="None" ReturnValueLookup="" Arguments="{x:Null}" Advanced="True" ImpersonatePowerShellUserLogOnType="None" PowerShellUser="" PowerShellUserPassword="" ImpersonatePowerShellUserLoadUserProfile="False" Script="# WAL Activity to flag cases where an agency defined for a user does not exist in the table&#xA;Param (&#xA;    $UserUPN&#xA;)&#xA;&#xA;# check to make sure the event source exists in the log first&#xA;try {Get-EventLog -Source UPNorEMAILProblem -LogName WAL -ea stop}  &#xA;catch [System.ArgumentException] {Write-Debug &quot;That source doesnt exist, creating&quot;; New-EventLog -Source UPNorEMAILProblem  -LogName WAL}&#xA;&#xA;Write-EventLog -LogName WAL -Source UPNorEMAILProblem -EntryType Error -EventId 667 -Message &quot;UPN or EMAIL value set by the agency for $UserUPN does not end with @state.mn.us&quot;" FailOnMissing="True" InputType="Parameters">
+		<ns1:RunPowerShellScript.ParametersTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/OldValue]<x:Key><ns4:String>0:1</ns4:String></x:Key></ns4:String>
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>0:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">UserUPN<x:Key><ns4:String>0:0</ns4:String></x:Key></ns4:String>
+			</ns3:Hashtable>
+		</ns1:RunPowerShellScript.ParametersTable>
+	</ns1:RunPowerShellScript>
+	<ns1:UpdateResources x:Name="actionActivity1" ActivityExecutionCondition="IsPresent([//WorkflowData/OldValue])" ActivityDisplayName="Sanitize Prefix and Suffix" Iteration="" ActorType="Service" ApplyAuthorizationPolicy="False" ResolveDynamicGrammar="False" QueryResources="False" Advanced="True" ActorString="">
+		<ns1:UpdateResources.UpdatesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/CleanSuffix]<x:Key><ns4:String>1:1</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">NormalizeString([//WorkflowData/Suffix], "Å:AA|Ä:AE|Ö:OE|å:aa|ä:ae|ö:oe|ß:ss|æ:ae")<x:Key><ns4:String>1:0</ns4:String></x:Key></ns4:String>
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">2<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>1:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>0:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">NormalizeString([//WorkflowData/Prefix], "Å:AA|Ä:AE|Ö:OE|å:aa|ä:ae|ö:oe|ß:ss|æ:ae")<x:Key><ns4:String>0:0</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/CleanPrefix]<x:Key><ns4:String>0:1</ns4:String></x:Key></ns4:String>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.UpdatesTable>
+		<ns1:UpdateResources.QueriesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.QueriesTable>
+	</ns1:UpdateResources>
+	<ns1:GenerateUniqueValue ActivityExecutionCondition="IsPresent([//WorkflowData/OldValue])" ActivityDisplayName="Generate Unique UPN" PublicationTarget="[//WorkflowData/UniqueUPN]" ConflictFilter="/Person[UniqueUPN = '[//Value]']" UniquenessSeed="2" QueryLdap="True" x:Name="actionActivity2">
+		<ns1:GenerateUniqueValue.ValueExpressions>
+			<ns3:ArrayList xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/CleanPrefix] + "@" + [//WorkflowData/CleanSuffix]</ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/CleanPrefix]+ [//UniquenessKey] + "@" + [//WorkflowData/CleanSuffix]</ns4:String>
+			</ns3:ArrayList>
+		</ns1:GenerateUniqueValue.ValueExpressions>
+		<ns1:GenerateUniqueValue.LdapQueriesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">(&amp;(objectClass=user)(objectCategory=person)(userPrincipalName=[//Value]))<x:Key><ns4:String>0:1</ns4:String></x:Key></ns4:String>
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>0:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">GC://DC=MIMLAB,DC=LOCAL<x:Key><ns4:String>0:0</ns4:String></x:Key></ns4:String>
+			</ns3:Hashtable>
+		</ns1:GenerateUniqueValue.LdapQueriesTable>
+	</ns1:GenerateUniqueValue>
+	<ns1:UpdateResources x:Name="actionActivity4" ActivityExecutionCondition="IsPresent([//WorkflowData/UniqueUPN])" ActivityDisplayName="Update AccountNameHistory" Iteration="" ActorType="Service" ApplyAuthorizationPolicy="False" ResolveDynamicGrammar="False" QueryResources="False" Advanced="True" ActorString="">
+		<ns1:UpdateResources.UpdatesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//Target/AccountNameHistory]<x:Key><ns4:String>0:1</ns4:String></x:Key></ns4:String>
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>0:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">InsertValues("User UPN Changed from " + [//WorkflowData/OldValue] + " to " + [//WorkflowData/UniqueUPN] + " on " + DateTimeUtcToLocalTime(DateTimeNow()))<x:Key><ns4:String>0:0</ns4:String></x:Key></ns4:String>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.UpdatesTable>
+		<ns1:UpdateResources.QueriesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.QueriesTable>
+	</ns1:UpdateResources>
+	<ns1:UpdateResources x:Name="actionActivity5" ActivityExecutionCondition="IsPresent([//WorkflowData/UniqueUPN])" ActivityDisplayName="Set CarLicense and UniqueUPN" Iteration="" ActorType="Service" ApplyAuthorizationPolicy="False" ResolveDynamicGrammar="False" QueryResources="False" Advanced="True" ActorString="">
+		<ns1:UpdateResources.UpdatesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//Target/UniqueUPN]<x:Key><ns4:String>1:1</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//WorkflowData/UniqueUPN]<x:Key><ns4:String>1:0</ns4:String></x:Key></ns4:String>
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">2<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>1:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:Boolean xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false<x:Key><ns4:String>0:2</ns4:String></x:Key></ns4:Boolean>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">"unique"<x:Key><ns4:String>0:0</ns4:String></x:Key></ns4:String>
+				<ns4:String xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">[//Target/CarLicense]<x:Key><ns4:String>0:1</ns4:String></x:Key></ns4:String>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.UpdatesTable>
+		<ns1:UpdateResources.QueriesTable>
+			<ns3:Hashtable xmlns:ns3="clr-namespace:System.Collections;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<ns4:Int32 xmlns:ns4="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0<x:Key><ns4:String>Count</ns4:String></x:Key></ns4:Int32>
+			</ns3:Hashtable>
+		</ns1:UpdateResources.QueriesTable>
+	</ns1:UpdateResources>
+</ns0:SequentialWorkflow>
